@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Les bases d'un menu</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="../css/global.css" type="text/css" rel="stylesheet" media="screen"/>
+
+        <style type="text/css">
+            #menu ul
+            {
+                margin-left: 0;
+                padding-left: 0;
+                white-space: nowrap;
+            }
+
+            #menu ul li
+            {
+                display: inline;
+                list-style-type: none;
+            }
+
+            #menu ul li a { 
+                text-decoration: none;
+                padding: 3px 10px; 
+            }
+
+            #menu ul li a:link, #menu ul li a:visited
+            {
+                color: #fff;
+                background-color: #666;
+            }
+
+            #menu ul li a:hover
+            {
+                color: #fff;
+                background-color: #6C6;
+            }
+        </style>
+
+    </head>
+
+    <body>
+        <span id="monEmail"></span>
+        <script type="text/javascript">
+            var monmail = "contact@";
+            monmail += "freelancetoulouse.com";
+            var a = document.createElement('a');
+            var linkText = document.createTextNode("Contact");
+            a.appendChild(linkText);
+            a.title = "email : " + monmail;
+            a.href = "mailto:" + monmail + "?subject=question à partir du site internet";
+            document.getElementById("monEmail").appendChild(a);
+
+        </script>
+
+        <nav id="menu">
+            <ul>
+                <li><a href="#">Pommes</a></li>
+                <li><a href="#">Poires</a></li>
+                <li><a href="#">Bananes</a></li>
+                <li><a href="#">Kiwis</a></li>
+                <li><a href="#">Pamplemousses</a></li>
+            </ul>
+        </nav>
+
+    </body>
+</html>
